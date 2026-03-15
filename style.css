@@ -106,7 +106,7 @@ body {
 .btn:hover {
     background-color: var(--primary-hover);
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(90, 103, 216, 0.3);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
 /* Sekcja Informacyjna (CSS Grid) */
