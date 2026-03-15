@@ -1,10 +1,10 @@
 /* Reset i zmienne globalne dla spójności estetycznej */
 :root {
-    --primary-color: #5a67d8;
-    --primary-hover: #434190;
+    --primary-color: #888888;
+    --primary-hover: #636363;
     --bg-light: #f7fafc;
-    --text-main: #2d3748;
-    --text-muted: #718096;
+    --text-main: #505050;
+    --text-muted: #909090;
     --card-bg: #ffffff;
     --transition: all 0.3s ease;
 }
