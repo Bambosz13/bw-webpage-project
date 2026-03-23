@@ -1,4 +1,3 @@
-/* Reset i zmienne globalne dla spójności estetycznej */
 :root {
     --primary-color: #767676;
     --primary-hover: #555555;
@@ -22,7 +21,6 @@ body {
     line-height: 1.6;
 }
 
-/* Nawigacja (Flexbox) */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -58,14 +56,12 @@ body {
     color: var(--primary-color);
 }
 
-/* Sekcja Hero (Flexbox + Gradient) */
 .hero {
     min-height: 80vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    /* Estetyczne tło gradientowe */
     background: linear-gradient(135deg, #e2e8f0 0%, #ebf4ff 100%);
     padding: 2rem 1rem;
 }
@@ -91,7 +87,6 @@ body {
     margin-bottom: 2.5rem;
 }
 
-/* Przycisk */
 .btn {
     display: inline-block;
     padding: 0.8rem 2.5rem;
@@ -109,7 +104,6 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* Sekcja Informacyjna (CSS Grid) */
 .features {
     padding: 5rem 5%;
     text-align: center;
@@ -123,7 +117,6 @@ body {
 
 .grid-container {
     display: grid;
-    /* Automatyczne dopasowanie kolumn do szerokości ekranu */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2.5rem;
 }
@@ -152,7 +145,6 @@ body {
     color: var(--text-muted);
 }
 
-/* Stopka */
 footer {
     text-align: center;
     padding: 2rem;
@@ -160,7 +152,6 @@ footer {
     color: #e2e8f0;
 }
 
-/* RWD - Dostosowanie do mniejszych ekranów */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -174,4 +165,57 @@ footer {
     .hero-content {
         padding: 2rem;
     }
+}
+
+.puzzle-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.puzzle-controls p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-main);
+    margin: 0;
+}
+
+.puzzle-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 2px;
+    background-color: var(--text-muted);
+    width: max-content;
+    margin: 0 auto 20px auto;
+    border: 2px solid var(--text-muted);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.puzzle-tile {
+    width: 100px;
+    height: 100px;
+    background-size: 300px 300px;
+    cursor: pointer;
+    transition: transform 0.1s ease-in-out;
+}
+
+.puzzle-tile:active {
+    transform: scale(0.95);
+}
+
+.puzzle-empty {
+    width: 100px;
+    height: 100px;
+    background-color: var(--bg-light); 
+    cursor: default;
+}
+
+.win-message h2 {
+    color: #38a169; 
+    margin-top: 15px;
 }
