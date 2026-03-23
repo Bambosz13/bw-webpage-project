@@ -96,12 +96,24 @@ body {
     border-radius: 30px;
     font-weight: bold;
     transition: var(--transition);
+    
+    border: none;            
+    cursor: pointer;          
+    font-family: inherit;     
+    font-size: 1rem;          
+    outline: none;            
 }
 
 .btn:hover {
     background-color: var(--primary-hover);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.btn:active {
+    transform: translateY(1px); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+};
 }
 
 .features {
