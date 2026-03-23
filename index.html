@@ -21,9 +21,20 @@
     <main>
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1>Minimalizm i Estetyka</h1>
-                <p>Prosty układ strony zaprojektowany z myślą o czytelności i wygodzie użytkownika. Zbudowany przy użyciu HTML5 i CSS3.</p>
-                <a href="#about" class="btn">Zobacz więcej</a>
+                <h1>Układanka Puzzle</h1>
+    
+                <div class="puzzle-controls">
+                    <p>Liczba ruchów: <span id="move-counter">0</span></p>
+                    <button id="change-image-btn" class="btn">Zmień obrazek</button>
+                    <button id="reset-btn" class="btn">Mieszaj (Reset)</button>
+                </div>
+
+                <div id="puzzle-board" class="puzzle-board">
+                </div>
+            
+                <div id="win-message" class="win-message" style="display: none;">
+                    <h2>Gratulacje! Układanka rozwiązana!</h2>
+                </div>
             </div>
         </section>
 
