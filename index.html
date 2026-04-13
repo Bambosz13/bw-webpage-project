@@ -3,40 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RWD + SPA Projekt</title>
+    <title>Nowoczesne SPA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>Moje SPA</h1>
+        <div class="logo">Agencja <span>Kreatywna</span></div>
         <nav>
-            <a href="#home" class="nav-link" data-target="home">Start</a>
-            <a href="#dashboard" class="nav-link" data-target="dashboard">Panel</a>
-            <a href="#contact" class="nav-link" data-target="contact">Kontakt</a>
+            <a href="#home" class="nav-link active" data-target="home">Start</a>
+            <a href="#dashboard" class="nav-link" data-target="dashboard">Panel Osiągnięć</a>
+            <a href="#contact" class="nav-link" data-target="contact">Napisz do nas</a>
         </nav>
     </header>
 
     <main>
         <section id="home" class="page active">
-            <h2>Strona Główna</h2>
-            <p>To jest przykładowy tekst. Layout dostosowuje się do szerokości ekranu.</p>
+            <div class="hero">
+                <h2>Witaj w świecie designu</h2>
+                <p>Tworzymy wyjątkowe doświadczenia cyfrowe bez zbędnego kodu.</p>
+            </div>
             
+            <h3 class="section-title">Nasze Usługi</h3>
             <div class="grid-container">
-                <div class="box">Moduł 1</div>
-                <div class="box">Moduł 2</div>
-                <div class="box">Moduł 3</div>
-                <div class="box">Moduł 4</div>
+                <div class="card">
+                    <h4>Projektowanie UX/UI</h4>
+                    <p>Tworzymy makiety i prototypy przyjazne dla użytkowników.</p>
+                </div>
+                <div class="card">
+                    <h4>Grafika 3D</h4>
+                    <p>Wizualizacje, animacje i modele trójwymiarowe.</p>
+                </div>
+                <div class="card">
+                    <h4>Copywriting</h4>
+                    <p>Angażujące treści, które przyciągają uwagę i sprzedają.</p>
+                </div>
             </div>
         </section>
 
         <section id="dashboard" class="page">
-            <h2>Panel analityczny</h2>
-            <p>Treść drugiego widoku. Zawartość wczytana bez odświeżania przeglądarki.</p>
+            <h2 class="section-title">Podsumowanie Kwartalne</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-box">Zrealizowane Projekty: <strong>142</strong></div>
+                <div class="stat-box">Zadowoleni Klienci: <strong>98%</strong></div>
+            </div>
+
+            <h3>Ostatnie realizacje</h3>
+            <div class="table-responsive">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nazwa Projektu</th>
+                            <th>Klient</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rebranding marki obuwniczej</td>
+                            <td>Firma XYZ</td>
+                            <td><span class="badge success">Zakończone</span></td>
+                        </tr>
+                        <tr>
+                            <td>Projekt opakowań eko</td>
+                            <td>Natura-Pol</td>
+                            <td><span class="badge warning">W toku</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
         <section id="contact" class="page">
-            <h2>Kontakt</h2>
-            <p>Tutaj znajdowałby się formularz kontaktowy.</p>
+            <h2 class="section-title">Porozmawiajmy o Twoim projekcie</h2>
+            <div class="form-container">
+                <form id="contactForm">
+                    <div class="input-group">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" id="name" required placeholder="Jan Kowalski">
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Adres e-mail</label>
+                        <input type="email" id="email" required placeholder="jan@example.com">
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Wiadomość</label>
+                        <textarea id="message" rows="5" required placeholder="W czym możemy pomóc?"></textarea>
+                    </div>
+                    <button type="submit" class="btn">Wyślij wiadomość</button>
+                </form>
+            </div>
         </section>
     </main>
 
