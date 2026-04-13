@@ -3,64 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nowoczesny Webdesign</title>
+    <title>RWD + SPA Projekt</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">ProjektHTML</div>
+    <header>
+        <h1>Moje SPA</h1>
         <nav>
-            <ul>
-                <li><a href="#home">Start</a></li>
-                <li><a href="#about">O projekcie</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
+            <a href="#home" class="nav-link" data-target="home">Start</a>
+            <a href="#dashboard" class="nav-link" data-target="dashboard">Panel</a>
+            <a href="#contact" class="nav-link" data-target="contact">Kontakt</a>
         </nav>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1>Układanka Puzzle</h1>
-    
-                <div class="puzzle-controls">
-                    <p>Liczba ruchów: <span id="move-counter">0</span></p>
-                    <button id="change-image-btn" class="btn">Zmień obrazek</button>
-                    <button id="reset-btn" class="btn">Mieszaj (Reset)</button>
-                </div>
-
-                <div id="puzzle-board" class="puzzle-board">
-                </div>
+        <section id="home" class="page active">
+            <h2>Strona Główna</h2>
+            <p>To jest przykładowy tekst. Layout dostosowuje się do szerokości ekranu.</p>
             
-                <div id="win-message" class="win-message" style="display: none;">
-                    <h2>Gratulacje! Układanka rozwiązana!</h2>
-                </div>
+            <div class="grid-container">
+                <div class="box">Moduł 1</div>
+                <div class="box">Moduł 2</div>
+                <div class="box">Moduł 3</div>
+                <div class="box">Moduł 4</div>
             </div>
         </section>
 
-        <section id="about" class="features">
-            <h2>Główne założenia układu</h2>
-            <div class="grid-container">
-                <div class="card">
-                    <h3>Responsywność</h3>
-                    <p>Dzięki CSS Grid i Flexbox strona płynnie dopasowuje się do ekranów smartfonów, tabletów i monitorów komputerowych.</p>
-                </div>
-                <div class="card">
-                    <h3>Standard W3C</h3>
-                    <p>Struktura oparta na semantycznych tagach (header, main, section), która zapewnia pełną zgodność z wytycznymi w3c.</p>
-                </div>
-                <div class="card">
-                    <h3>Czysty design</h3>
-                    <p>Wykorzystanie cieni, zaokrągleń i niewielkich animacji bez użycia zewnętrznych skryptów.</p>
-                </div>
-            </div>
+        <section id="dashboard" class="page">
+            <h2>Panel analityczny</h2>
+            <p>Treść drugiego widoku. Zawartość wczytana bez odświeżania przeglądarki.</p>
+        </section>
+
+        <section id="contact" class="page">
+            <h2>Kontakt</h2>
+            <p>Tutaj znajdowałby się formularz kontaktowy.</p>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Projekt na Programowanie w internecie.</p>
-    </footer>
+    <script src="app.js"></script>
 </body>
 </html>
-
-<script src="script.js"></script>
